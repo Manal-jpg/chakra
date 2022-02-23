@@ -1,5 +1,6 @@
 import {
     Box,
+    Spacer, 
     Center,
     Text,
     Stack,
@@ -8,80 +9,24 @@ import {
     ListIcon,
     Button,
     useColorModeValue,
+    Grid,
+    HStack,
+    Image
   } from '@chakra-ui/react';
-  import { CheckIcon } from '@chakra-ui/icons';
+import { CheckIcon } from '@chakra-ui/icons';
+import Branch from '../components/Branch';
   
-  export default function Pricing() {
+function Branches() {
     return (
       <Center py={6}>
-        <Box
-          maxW={'330px'}
-          w={'full'}
-          bg={useColorModeValue('white', 'gray.800')}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          overflow={'hidden'}>
-          <Stack
-            textAlign={'center'}
-            p={6}
-            color={useColorModeValue('gray.800', 'white')}
-            align={'center'}>
-            <Text
-              fontSize={'sm'}
-              fontWeight={500}
-              bg={useColorModeValue('green.50', 'green.900')}
-              p={2}
-              px={3}
-              color={'green.500'}
-              rounded={'full'}>
-              Hobby
-            </Text>
-            <Stack direction={'row'} align={'center'} justify={'center'}>
-              <Text fontSize={'3xl'}>$</Text>
-              <Text fontSize={'6xl'} fontWeight={800}>
-                79
-              </Text>
-              <Text color={'gray.500'}>/month</Text>
-            </Stack>
-          </Stack>
-  
-          <Box bg={useColorModeValue('gray.50', 'gray.900')} px={6} py={10}>
-            <List spacing={3}>
-              <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
-                5.000 page views
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
-                50 automation executions
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
-                50 identified users
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
-                All features
-              </ListItem>
-            </List>
-  
-            <Button
-              mt={10}
-              w={'full'}
-              bg={'green.400'}
-              color={'white'}
-              rounded={'xl'}
-              boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-              _hover={{
-                bg: 'green.500',
-              }}
-              _focus={{
-                bg: 'green.500',
-              }}>
-              Start your trial
-            </Button>
-          </Box>
-        </Box>
+        <HStack> 
+            <Branch imageUrl={"http://shangrilacentreub.mn/media/shangrila/content/web_Shangri-LaCentre.jpg"}  branchName={"Shangri-La"} />
+
+            <Branch imageUrl={"https://scontent.fuln2-2.fna.fbcdn.net/v/t31.18172-8/14068597_906824536117763_3372603366612006854_o.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=7kHQ5ZZcm8EAX9HrdQU&tn=R2pEhUkkLpdMK2PA&_nc_ht=scontent.fuln2-2.fna&oh=00_AT9IJwoxHHZZ1Aql7LsaCBVZKTgnFAhIbtBhtgdSMkz_mg&oe=623D6439"} branchName={"Zaisan Hill"} />
+        </HStack>
       </Center>
     );
   }
+
+
+  export default Branches

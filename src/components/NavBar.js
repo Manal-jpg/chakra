@@ -5,12 +5,12 @@ import {FaSun, FaMoon} from 'react-icons/fa';
 function NavBar() {
     const {colorMode, toggleColorMode} = useColorMode();
     return (
-        <Flex alignItems="center" justifyContent="space-between"> 
-            <HStack>
+        <Flex  w="100%"> 
+
                 <Button > Manalav </Button>
-                <Spacer />
-                <IconButton icon={colorMode === "light" ? <FaSun/> : <FaMoon/>} onClick={toggleColorMode} isRound="true" size="lg" alignSelf="flex-end" />
-            </HStack>
+                <Spacer /> 
+                <IconButton icon={colorMode === "light" ? <FaSun/> : <FaMoon/>} onClick={toggleColorMode} isRound="true" size="lg"  />
+
         </Flex>
     )
 }
